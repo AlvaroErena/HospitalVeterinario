@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "0f91f8fe-6edf-4de3-8e80-248cbcc2ba2b",
+		"name": "Veterinario API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37001789"
+	},
+	"item": [
+		{
+			"name": "All Ingresos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/ingreso",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ingreso"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mascota By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/mascota/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mascota",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Mascota",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"especie\": \"Perro\",\r\n  \"raza\": \"Shiba\",\r\n  \"edad\": 4,\r\n  \"codigoIdentificacion\": \"FFFF123\",\r\n  \"responsable\": {\r\n    \"id\": 1\r\n  }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/mascota",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mascota"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Ingresos by Mascota ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/mascota/4/ingreso",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mascota",
+						"4",
+						"ingreso"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
