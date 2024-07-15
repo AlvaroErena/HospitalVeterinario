@@ -37,7 +37,10 @@ public class IngresoService {
     }
 
     public Ingreso createIngreso(Long mascotaId, LocalDate fechaAltaIngreso) {
+    	
+    	// Comrpobamos que la mascota existe y si existe esta activa
         Optional<Mascota> mascotaOpt = mascotaRepository.findById(mascotaId);
+        
         if (mascotaOpt.isPresent() && mascotaOpt.get().isActiva()) {
             Mascota mascota = mascotaOpt.get();
             Ingreso ingreso = new Ingreso();
@@ -56,6 +59,7 @@ public class IngresoService {
         if (ingresoOpt.isPresent() && mascotaOpt.isPresent() && mascotaOpt.get().isActiva()) {
             Ingreso ingreso = ingresoOpt.get();
             ingreso.setFechaAltaIngreso(updatedIngreso.getFechaAltaIngreso());
+            // Un ingreso no puede estar finalizado sin fecha de fin
             ingreso.setFechaFinalizacionIngreso(updatedIngreso.getFechaFinalizacionIngreso());
             ingreso.setEstado(updatedIngreso.getEstado());
             ingreso.setMascota(mascotaOpt.get());

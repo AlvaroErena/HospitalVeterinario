@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/mascotas")
+@RequestMapping("/mascota")
 public class MascotaController {
 
     private final MascotaService mascotaService;
@@ -27,7 +27,7 @@ public class MascotaController {
         return mascotaService.getMascotaById(id);
     }
 
-    @GetMapping("/{id}/ingresos")
+    @GetMapping("/{id}/ingreso")
     public List<Ingreso> getIngresosByMascotaId(@PathVariable Long id) {
         return ingresoService.getIngresosByMascotaId(id);
     }

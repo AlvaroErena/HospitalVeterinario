@@ -11,6 +11,7 @@ import java.util.List;
 @RequestMapping("/persona")
 public class PersonaController {
 
+	// Creamos el controlador y servicio Persona en caso de tener que solucionar errores si los datos de las tablas dan problemas
     private final PersonaService personaService;
 
     @Autowired

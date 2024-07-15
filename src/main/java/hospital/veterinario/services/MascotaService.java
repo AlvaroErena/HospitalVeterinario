@@ -32,7 +32,9 @@ public class MascotaService {
     public void deleteMascota(Long id) {
         Mascota mascota = getMascotaById(id);
         if (mascota != null) {
-            mascota.setActiva(false); // Cambia el estado a "desactivada"
+        	
+        	// Cambia el estado a "desactivada"
+            mascota.setActiva(false);
             mascotaRepository.save(mascota);
         }
     }

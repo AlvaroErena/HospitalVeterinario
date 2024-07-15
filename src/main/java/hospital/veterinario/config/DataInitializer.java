@@ -18,6 +18,7 @@ import java.time.LocalDate;
 @Configuration
 public class DataInitializer {
 
+	// Inicializamos los valores de las tablas para que hayan datos existentes cuando hagamos las peticiones
     @Autowired
     private PersonaRepository personaRepository;
 

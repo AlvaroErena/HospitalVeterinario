@@ -10,6 +10,7 @@ import java.util.List;
 @Service
 public class PersonaService {
 
+	// CRUD basico para realizar pruebas
     private final PersonaRepository personaRepository;
 
     @Autowired

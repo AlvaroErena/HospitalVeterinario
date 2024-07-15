@@ -1,7 +1,6 @@
 package hospital.veterinario.models;
 
 import jakarta.persistence.*;
-import java.util.List;
 
 @Entity
 public class Mascota {
